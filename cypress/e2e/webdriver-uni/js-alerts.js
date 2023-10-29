@@ -2,8 +2,10 @@
 
 describe("handling alert in cypress",()=>{
 
-    it("confirm alert is contain the correct text",()=>{
+    beforeEach(()=>{
         cy.visit("https://www.webdriveruniversity.com/Popup-Alerts/index.html");
+    })
+    it("confirm alert is contain the correct text",()=>{
         cy.get("#button1").click()
         //notice that cypress by default press ok button
         cy.on('window:alert',(str)=>{
@@ -11,8 +13,7 @@ describe("handling alert in cypress",()=>{
         })
     })
 
-    it.only("click cancel in alert ",()=>{
-        cy.visit("https://www.webdriveruniversity.com/Popup-Alerts/index.html");
+    it("click cancel in alert ",()=>{
         cy.get("#button4").click()
         //notice that cypress by default press ok button
         // if you want to press cancel return false here (window:confirm)

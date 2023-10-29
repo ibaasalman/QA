@@ -1,9 +1,4 @@
-/// <reference types="cypress" />
-describe("working with tables",()=>{
-    it("calculate and assert the total age of all users",()=>{
-
-    })
-})/// <reference types="Cypress" />
+/// <reference types="Cypress" />
 describe("Handling data via webdriveruni", () => {
     beforeEach(() => {
       cy.visit("http://webdriveruniversity.com/");
