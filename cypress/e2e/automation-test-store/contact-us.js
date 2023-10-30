@@ -1,14 +1,17 @@
 /// <reference types="cypress" />
+import contactUsPage from "../../support/pageObjects/test-store/contactUsPage";
+const myContactsUsPage = new contactUsPage();
+
 describe("Test Contact Us page",()=>{
-    it("fill all required inputs and submit successfully",()=>{
+    
+    beforeEach(function(){
         cy.visit("https://www.automationteststore.com/");
         cy.get("a[href$='contact']").then((res)=>{
             console.log(res.text())
         }).click();
-        cy.get("#ContactUsFrm_first_name").type("ibaa");
-        cy.get("#ContactUsFrm_email").type("example@test.com");
-        cy.get("#ContactUsFrm_enquiry").type("hello world !");
-        cy.get("button[title='Submit']").click();
-        cy.get(".contentpanel .mb40").contains("Your enquiry has been successfully sent to the store owner!");
+    })
+
+    it("fill all required inputs and submit successfully",()=>{
+        myContactsUsPage.send("ibaa","example@test.com","hello world !","Your enquiry has been successfully sent to the store owner!")
     })
 })
