@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-01T09:10:33.568Z",
+    "end": "2023-11-01T09:10:53.859Z",
+    "duration": 20291,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2b19f63a-dfbb-4cdd-b032-2048316d575c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\iteration.js",
+      "file": "cypress\\e2e\\automation-test-store\\iteration.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1597bb40-0f23-4679-a60f-5dc9f50a8ec5",
+          "title": "itreate on items",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "log information about all haircare products",
+              "fullTitle": "itreate on items log information about all haircare products",
+              "timedOut": null,
+              "duration": 7290,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.automationteststore.com/\");\ncy.get(\".categorymenu a[href*='category&path=']\").contains(\"Hair Care\").click();\ncy.get(\".fixed_wrapper .prdocutname\").each(($el, $index, $list) => {\n  cy.log(\"index : \" + $index + \" | \" + $el.text());\n});",
+              "err": {},
+              "uuid": "aac867a8-dcc2-4d10-a0fc-9343e1999f2b",
+              "parentUUID": "1597bb40-0f23-4679-a60f-5dc9f50a8ec5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "add specific product to the cart",
+              "fullTitle": "itreate on items add specific product to the cart",
+              "timedOut": null,
+              "duration": 7663,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.automationteststore.com/\");\ncy.get(\".categorymenu a[href*='category&path=']\").contains(\"Hair Care\").click();\ncy.get(\".fixed_wrapper .prdocutname\").each(($el, $index, $list) => {\n  if ($el.text().includes(\"Curls to straight Shampoo\")) {\n    cy.wrap($el).click();\n  }\n});",
+              "err": {},
+              "uuid": "00278484-34c8-47cb-b848-5994487e8b94",
+              "parentUUID": "1597bb40-0f23-4679-a60f-5dc9f50a8ec5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aac867a8-dcc2-4d10-a0fc-9343e1999f2b",
+            "00278484-34c8-47cb-b848-5994487e8b94"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14953,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

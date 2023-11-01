@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-01T09:10:12.369Z",
+    "end": "2023-11-01T09:10:29.090Z",
+    "duration": 16721,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "40e6d41e-b432-4fb6-bcec-784d1f627669",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\contact-us.js",
+      "file": "cypress\\e2e\\automation-test-store\\contact-us.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a1f2c902-62ad-446a-947a-f1e9ecd9bb36",
+          "title": "Test Contact Us page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "fill all required inputs and submit successfully",
+              "fullTitle": "Test Contact Us page fill all required inputs and submit successfully",
+              "timedOut": null,
+              "duration": 11074,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "myContactsUsPage.send(\"ibaa\", \"example@test.com\", \"hello world !\", \"Your enquiry has been successfully sent to the store owner!\");",
+              "err": {},
+              "uuid": "d6eca80c-ae65-4046-86d4-619b6aea9d68",
+              "parentUUID": "a1f2c902-62ad-446a-947a-f1e9ecd9bb36",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d6eca80c-ae65-4046-86d4-619b6aea9d68"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11074,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

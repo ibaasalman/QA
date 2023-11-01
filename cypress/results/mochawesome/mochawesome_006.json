@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-01T08:27:42.488Z",
+    "end": "2023-11-01T08:27:58.443Z",
+    "duration": 15955,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fc577324-7c40-43d6-9978-e8a6b0b506ee",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\contact-us.js",
+      "file": "cypress\\e2e\\webdriver-uni\\contact-us.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6aa37eed-2fb4-4d38-a07d-1939657f7acc",
+          "title": "Test Contact Us page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "cheack page title and charset",
+              "fullTitle": "Test Contact Us page cheack page title and charset",
+              "timedOut": null,
+              "duration": 4125,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.document().should(\"have.property\", \"charset\").and(\"eq\", \"UTF-8\");\ncy.title().should(\"include\", \"WebDriver | Contact Us\");\ncy.url().should(\"include\", \"Contact-Us\");",
+              "err": {},
+              "uuid": "534a5555-29ed-492d-9d3e-57b9162cbcfc",
+              "parentUUID": "6aa37eed-2fb4-4d38-a07d-1939657f7acc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "fill all required inputs and submit successfully",
+              "fullTitle": "Test Contact Us page fill all required inputs and submit successfully",
+              "timedOut": null,
+              "duration": 4992,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[placeholder=\"First Name\"]').type(data.firstname);\ncy.get('[placeholder=\"Last Name\"]').type(data.lastname);\ncy.get('[placeholder=\"Email Address\"]').type(data.email);\ncy.get('[placeholder=\"Comments\"]').type(data.body);\ncy.get('[Value=\"SUBMIT\"]').click();\ncy.get(\"#contact_reply > h1\").should(\"have.text\", \"Thank You for your Message!\");",
+              "err": {},
+              "uuid": "33695b6c-d992-4742-9068-9cd51491e3ba",
+              "parentUUID": "6aa37eed-2fb4-4d38-a07d-1939657f7acc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "534a5555-29ed-492d-9d3e-57b9162cbcfc",
+            "33695b6c-d992-4742-9068-9cd51491e3ba"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9117,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

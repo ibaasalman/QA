@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-01T08:26:04.280Z",
+    "end": "2023-11-01T08:26:17.874Z",
+    "duration": 13594,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ae117cff-2f53-4eed-8990-7b429e3072bb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\alias-invoke.js",
+      "file": "cypress\\e2e\\automation-test-store\\alias-invoke.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "acc7e811-1404-4cc9-8dd8-cb1c5d96ceac",
+          "title": "aias and invoke exmaples",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "calculate items prices including ones on sale",
+              "fullTitle": "aias and invoke exmaples calculate items prices including ones on sale",
+              "timedOut": null,
+              "duration": 7276,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.automationteststore.com/\");\ncy.get(\".thumbnail\").as(\"productThumbnail\");\nlet sum = 0;\n// product not in sale only have .oneprice  class\ncy.get(\"@productThumbnail\").find(\".oneprice\").invoke('text').as('prodprices');\ncy.get('@prodprices').then(items => {\n  const prices = items.split('$');\n  let nonsaleprices = 0;\n  prices.forEach(i => {\n    nonsaleprices += +i;\n  });\n  sum += nonsaleprices;\n  cy.log(\"Non SALE prods sum is :\" + nonsaleprices);\n});\n// product on sale have .pricenew class\ncy.get(\"@productThumbnail\").find(\".pricenew\").invoke('text').as('saleprodprices');\ncy.get('@saleprodprices').then(items => {\n  const prices = items.split('$');\n  let saleprices = 0;\n  prices.forEach(i => {\n    saleprices += +i;\n  });\n  sum += saleprices;\n  cy.log(\"SALE prods sum is :\" + saleprices);\n  cy.log(\"total sum : \" + sum);\n});",
+              "err": {},
+              "uuid": "b3cdacc1-c1e7-407a-8337-a86b89b552d2",
+              "parentUUID": "acc7e811-1404-4cc9-8dd8-cb1c5d96ceac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b3cdacc1-c1e7-407a-8337-a86b89b552d2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7276,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

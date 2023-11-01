@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-01T09:12:40.934Z",
+    "end": "2023-11-01T09:12:46.385Z",
+    "duration": 5451,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1746e193-d64a-4f8c-947c-0196f6204584",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\js-alerts.js",
+      "file": "cypress\\e2e\\webdriver-uni\\js-alerts.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dd2cf83a-56fe-4b4f-9a82-faca46b7ab06",
+          "title": "handling alert in cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "confirm alert is contain the correct text",
+              "fullTitle": "handling alert in cypress confirm alert is contain the correct text",
+              "timedOut": null,
+              "duration": 2140,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#button1\").click();\n//notice that cypress by default press ok button\ncy.on('window:alert', str => {\n  expect(str).to.equal(\"I am an alert box!\");\n});",
+              "err": {},
+              "uuid": "a7b24e56-2e19-460a-8e52-1a5da3564ed7",
+              "parentUUID": "dd2cf83a-56fe-4b4f-9a82-faca46b7ab06",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "click cancel in alert ",
+              "fullTitle": "handling alert in cypress click cancel in alert ",
+              "timedOut": null,
+              "duration": 654,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#button4\").click();\n//notice that cypress by default press ok button\n// if you want to press cancel return false here (window:confirm)\ncy.on('window:confirm', str => {\n  return false;\n});\ncy.get(\"#confirm-alert-text\").should(\"have.text\", \"You pressed Cancel!\");",
+              "err": {},
+              "uuid": "b1905280-6783-4a71-9d91-ece9f2e3127f",
+              "parentUUID": "dd2cf83a-56fe-4b4f-9a82-faca46b7ab06",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a7b24e56-2e19-460a-8e52-1a5da3564ed7",
+            "b1905280-6783-4a71-9d91-ece9f2e3127f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2794,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
