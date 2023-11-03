@@ -9,7 +9,7 @@
     "delete-junit-reports": "rm -rf cypress/results/junit/results.xml",
     "delete-reports":"rm -rf cypress/results/junit/* || true",
     "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
-    "delete-mochawesome-report": "rm -rf mochawesome-report/* || true",
+    "delete-mochawesome-report": "rm -rf cypress/results/mochawesome/* || true",
     "cypress-regression-pack": "npm run delete-reports && npm run delete-mochawesome-report && npx cypress run && npm run mochawesome-merge"
   },
   "author": "",
